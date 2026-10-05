@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Note App</string>
+    <string name="app_name">NoteBook</string>
+    <string name="title_activity_splash_screen">NoteBook</string>
 </resources>

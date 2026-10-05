@@ -50,10 +50,18 @@ fun ReadNoteScreen(
         containerColor = Color(note.color),
         topBar = {
             TopAppBar(
-                title = { Text(note.title) },
+                title = {
+                    Text(
+                        note.title,
+                        color = Color.Black
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = { onBack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(
+                            Icons.Default.ArrowBack, contentDescription = "Back",
+                            tint = Color.Black
+                        )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(note.color))
@@ -96,20 +104,20 @@ fun ReadNoteScreen(
                     onClick = { onEdit(note) },
                     modifier = Modifier
                         .weight(1f)
-                        .height(40.dp),
+                        .height(35.dp),
                     shape = RoundedCornerShape(16.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFF6C63B5),
                         contentColor = Color.White
                     )
                 ) {
-                    Text("Edit", fontSize = 19.sp, fontWeight = FontWeight.SemiBold)
+                    Text("Edit", fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
                 }
                 Button(
                     onClick = { onDelete(note) },
                     modifier = Modifier
                         .weight(1f)
-                        .height(40.dp),
+                        .height(35.dp),
                     shape = RoundedCornerShape(16.dp),
                     colors = ButtonDefaults
                         .buttonColors(
@@ -117,7 +125,7 @@ fun ReadNoteScreen(
                             contentColor = Color.White
                         )
                 ) {
-                    Text("Delete", fontSize = 19.sp, fontWeight = FontWeight.SemiBold)
+                    Text("Delete", fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
                 }
             }
         }
